@@ -875,7 +875,7 @@ impl Hunter {
                             Some(timestamp) => {
                                 match NaiveDateTime::parse_from_str(
                                     timestamp,
-                                    "%Y-%m-%dT%H:%M:%S%.6fZ",
+                                    "%Y-%m-%dT%H:%M:%S%.fZ",
                                 ) {
                                     Ok(t) => t,
                                     Err(e) => {

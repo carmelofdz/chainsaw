@@ -74,7 +74,7 @@ impl Iterator for Iter<'_> {
                     | Document::Esedb(json) => match json.find(field) {
                         Some(value) => match value.as_str() {
                             Some(timestamp) => {
-                                NaiveDateTime::parse_from_str(timestamp, "%Y-%m-%dT%H:%M:%S%.6fZ")
+                                NaiveDateTime::parse_from_str(timestamp, "%Y-%m-%dT%H:%M:%S%.fZ")
                             }
                             None => continue,
                         },
